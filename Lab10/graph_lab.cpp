@@ -27,7 +27,6 @@ struct Graph{
     void addedge(int u, int v){
         //select node u and push v into u's neighbour
         nodes[u-1].neighbours.push_back(v);
-
         //select node v and push u into v's neighbour
         nodes[v-1].neighbours.push_back(u);
     }
@@ -35,6 +34,7 @@ struct Graph{
     void print(){
         //lets iterate through each node and print its neighbours
 
+        // print graph
         for (int i=0;i<n;i++){
             cout<<"Node "<<nodes[i].label<<" ->";
 
@@ -52,6 +52,7 @@ int main() {
     Graph * g = new Graph;
     g->intializenodes();
     //add edges for the graphs here.
+
     g->addedge(1,2);
     g->addedge(1,3);
     g->addedge(1,4);
@@ -71,4 +72,3 @@ int main() {
     //print the graph adjaceny list
     g->print();
 }
-
